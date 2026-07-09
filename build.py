@@ -29,8 +29,9 @@ ICONS = {
 
 NAV = [
   ("Home","index.html"), ("About","about.html"), ("Services","services/index.html"),
-  ("Portfolio","portfolio.html"), ("Pricing","pricing.html"), ("Industries","industries.html"),
-  ("FAQ","faq.html"), ("Blog","blog/index.html"), ("Contact","contact.html"),
+  ("Portfolio","portfolio.html"), ("Shop","shop.html"), ("Pricing","pricing.html"),
+  ("Industries","industries.html"), ("FAQ","faq.html"), ("Blog","blog/index.html"),
+  ("Contact","contact.html"),
 ]
 
 def rel(depth, path):
