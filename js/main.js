@@ -3,7 +3,7 @@
    Swap WHATSAPP_NUMBER below when the real number is ready.
    ============================================ */
 const LPH = {
-  WHATSAPP_NUMBER: "351900000000", // placeholder — replace with real number, digits only, country code first
+  WHATSAPP_NUMBER: "351920418547",
   WHATSAPP_DEFAULT_MESSAGE: "Hi! I'd like to request a printing quote.",
 };
 

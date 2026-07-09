@@ -9,7 +9,8 @@ import os, re
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SITE = "https://lisbonprinthouse.com"
 BIZ = "Lisbon Print House"
-PHONE_DISPLAY = "+351 900 000 000"
+PHONE_DISPLAY = "+351 920 418 547"
+PHONE_WA = "351920418547"
 EMAIL = "info@lisbonprinthouse.com"
 HOURS = "Mon–Fri 9:00–18:00, Sat 10:00–14:00"
 
@@ -28,10 +29,8 @@ ICONS = {
 }
 
 NAV = [
-  ("Home","index.html"), ("About","about.html"), ("Services","services/index.html"),
-  ("Portfolio","portfolio.html"), ("Shop","shop.html"), ("Pricing","pricing.html"),
-  ("Industries","industries.html"), ("FAQ","faq.html"), ("Blog","blog/index.html"),
-  ("Contact","contact.html"),
+  ("Services","services/index.html"), ("Portfolio","portfolio.html"),
+  ("Shop","shop.html"), ("Blog","blog/index.html"), ("Contact","contact.html"),
 ]
 
 def rel(depth, path):
