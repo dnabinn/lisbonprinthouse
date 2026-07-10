@@ -36,6 +36,9 @@ NAV = [
 def rel(depth, path):
   return ("../"*depth) + path
 
+def wa(msg="Hi! I'd like to request a printing quote."):
+  return f"https://wa.me/{PHONE_WA}?text={msg.replace(' ', '%20').replace('!', '%21').replace('?', '%3F').replace("'", '%27')}"
+
 def header(depth=0, active=""):
   items = ""
   for label, href in NAV:
@@ -47,7 +50,7 @@ def header(depth=0, active=""):
     <a href="{rel(depth,'index.html')}" class="nav-logo">{BIZ.split(' ')[0]} <span>{ ' '.join(BIZ.split(' ')[1:]) }</span></a>
     <ul class="nav-links">{items}</ul>
     <div class="nav-cta">
-      <a href="{rel(depth,'request-quote.html')}" class="btn btn-primary btn-sm" data-wa>{ICONS['wa']}<span class="btn-sm-label">Get a Quote on WhatsApp</span></a>
+      <a href="{wa()}" class="btn btn-primary btn-sm" target="_blank" rel="noopener">{ICONS['wa']}<span class="btn-sm-label">Get a Quote on WhatsApp</span></a>
       <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
@@ -56,13 +59,13 @@ def header(depth=0, active=""):
 
 def footer(depth=0):
   return f"""
-<a href="#" class="wa-float" data-wa aria-label="Chat on WhatsApp">{ICONS['wa']}</a>
+<a href="{wa()}" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">{ICONS['wa']}</a>
 <section class="container" style="padding:0 24px 80px;">
   <div class="cta-band fade-up">
     <h2>Ready to Print? Let's Talk on WhatsApp.</h2>
     <p>Send us your idea, files, or just a few details — we'll reply fast with pricing and next steps. No forms, no hassle.</p>
     <div class="ctas">
-      <a href="#" class="btn btn-primary" data-wa>{ICONS['wa']} Request a Quote on WhatsApp</a>
+      <a href="{wa()}" class="btn btn-primary" target="_blank" rel="noopener">{ICONS['wa']} Request a Quote on WhatsApp</a>
       <a href="{rel(depth,'portfolio.html')}" class="btn btn-outline-light">View Portfolio</a>
     </div>
   </div>
@@ -102,7 +105,7 @@ def footer(depth=0):
       <div class="footer-col">
         <h4>Get In Touch</h4>
         <ul>
-          <li><a href="#" data-wa>WhatsApp: {PHONE_DISPLAY}</a></li>
+          <li><a href="{wa()}" target="_blank" rel="noopener">WhatsApp: {PHONE_DISPLAY}</a></li>
           <li><a href="mailto:{EMAIL}">{EMAIL}</a></li>
           <li><a href="#">Lisbon, Portugal</a></li>
           <li>{HOURS}</li>
