@@ -14,7 +14,7 @@ def page_hero(eyebrow, title, desc, crumbs):
 </section>"""
 
 # ---------------- ABOUT ----------------
-body = page_hero("About Us","Printing Lisbon's Businesses Since Day One","We're a Lisbon-based print shop on a mission to make premium printing fast, simple, and accessible for every local business.", [("Home","index.html"),("About",None)]) + f"""
+body = page_hero("About Us","Printing Lisbon's Businesses Since Day One","We're a Lisbon-based print shop on a mission to make premium printing simple, reliable, and accessible for every local business.", [("Home","index.html"),("About",None)]) + f"""
 <section>
   <div class="container hero-grid">
     <div class="fade-up">
@@ -31,7 +31,7 @@ body = page_hero("About Us","Printing Lisbon's Businesses Since Day One","We're 
     <div class="section-head center"><div class="eyebrow">Our Values</div><h2>What Drives Every Order We Print</h2></div>
     <div class="grid grid-3">
       <div class="card icon-card fade-up"><div class="icon-wrap">{ICONS['shield']}</div><h3>Quality First</h3><p>We never cut corners on materials — every print reflects on your business, so it reflects our standards too.</p></div>
-      <div class="card icon-card fade-up"><div class="icon-wrap">{ICONS['clock']}</div><h3>Speed That Respects You</h3><p>Your business doesn't wait for marketing materials — neither should you. Fast turnaround is built into our process.</p></div>
+      <div class="card icon-card fade-up"><div class="icon-wrap">{ICONS['clock']}</div><h3>Clear Lead Times</h3><p>We give you an honest timeline upfront so you can plan around your order — no surprises, no chasing.</p></div>
       <div class="card icon-card fade-up"><div class="icon-wrap">{ICONS['wa']}</div><h3>Radically Simple</h3><p>One WhatsApp message instead of five-page forms. Print should be the easy part of running your business.</p></div>
     </div>
   </div>
@@ -40,7 +40,7 @@ body = page_hero("About Us","Printing Lisbon's Businesses Since Day One","We're 
   <div class="container grid grid-4 text-center">
     <div class="fade-up"><strong data-counter="300" style="font-size:2.4rem;font-weight:800;display:block;color:var(--color-primary);">0</strong><span>Businesses Served</span></div>
     <div class="fade-up"><strong data-counter="12000" style="font-size:2.4rem;font-weight:800;display:block;color:var(--color-primary);">0</strong><span>Orders Delivered</span></div>
-    <div class="fade-up"><strong data-counter="48" style="font-size:2.4rem;font-weight:800;display:block;color:var(--color-primary);">0</strong><span>Hour Avg Turnaround</span></div>
+    <div class="fade-up"><strong data-counter="5" style="font-size:2.4rem;font-weight:800;display:block;color:var(--color-primary);">0</strong><span>Years in Business</span></div>
     <div class="fade-up"><strong data-counter="18" style="font-size:2.4rem;font-weight:800;display:block;color:var(--color-primary);">0</strong><span>Districts Covered in Portugal</span></div>
   </div>
 </section>
@@ -49,9 +49,9 @@ write("about.html", page("About Us | Lisbon Print House","Learn about Lisbon Pri
 
 # ---------------- PRICING ----------------
 plans = [
-  ("Starter","Perfect for small batches and first orders.",False,["100 Business Cards (350gsm)","25 A5 Flyers","Standard 48–72h turnaround","Digital proof before printing","Pickup in Lisbon"]),
-  ("Business","Our most popular package for growing businesses.",True,["500 Business Cards (350gsm, soft-touch)","250 A5 Flyers","100 A2 Posters or 1 Roll-up Banner","Priority 24–48h turnaround","Free design review","Portugal-wide delivery"]),
-  ("Enterprise","For multi-location brands and bulk ordering.",False,["Custom quantities across all products","Dedicated account contact on WhatsApp","Volume-based pricing","Rush production available","Multi-location delivery scheduling"]),
+  ("Starter","Perfect for small batches and first orders.",False,["100 Business Cards (350gsm)","25 A5 Flyers","Digital proof before printing","Pickup in Lisbon"]),
+  ("Business","Our most popular package for growing businesses.",True,["500 Business Cards (350gsm, soft-touch)","250 A5 Flyers","100 A2 Posters or 1 Roll-up Banner","Free design review","Portugal-wide delivery"]),
+  ("Enterprise","For multi-location brands and bulk ordering.",False,["Custom quantities across all products","Dedicated account contact on WhatsApp","Volume-based pricing","Multi-location delivery scheduling"]),
 ]
 plan_cards = ""
 for name, desc, featured, feats in plans:
@@ -67,20 +67,20 @@ body = page_hero("Pricing","Transparent, Fair Pricing for Every Business Size","
 <section>
   <div class="container">
     <div class="grid grid-3">{plan_cards}</div>
-    <p class="text-center" style="margin-top:32px;">Prices vary by quantity, paper stock, and finish. Message us for an exact quote — most replies arrive within the hour.</p>
+    <p class="text-center" style="margin-top:32px;">Prices vary by quantity, paper stock, and finish. Message us on WhatsApp for an exact quote.</p>
   </div>
 </section>
 <section class="bg-soft">
   <div class="container">
     <div class="section-head center"><div class="eyebrow">Sample Pricing</div><h2>Typical Starting Prices</h2><p>Indicative pricing — final quote depends on quantity, finish, and materials.</p></div>
     <table class="table-clean">
-      <tr><th>Product</th><th>Starting From</th><th>Typical Turnaround</th></tr>
-      <tr><td>Business Cards (100 units)</td><td>€25</td><td>24–48h</td></tr>
-      <tr><td>A5 Flyers (250 units)</td><td>€35</td><td>24–48h</td></tr>
-      <tr><td>Restaurant Menus (A4, laminated)</td><td>€2.50/unit</td><td>48–72h</td></tr>
-      <tr><td>PVC Banner (2m x 1m)</td><td>€45</td><td>48–72h</td></tr>
-      <tr><td>Roll-up Banner (85x200cm)</td><td>€65</td><td>48–72h</td></tr>
-      <tr><td>Vinyl Stickers (100 units)</td><td>€30</td><td>24–48h</td></tr>
+      <tr><th>Product</th><th>Starting From</th></tr>
+      <tr><td>Business Cards (100 units)</td><td>€25</td></tr>
+      <tr><td>A5 Flyers (250 units)</td><td>€35</td></tr>
+      <tr><td>Restaurant Menus (A4, laminated)</td><td>€2.50/unit</td></tr>
+      <tr><td>PVC Banner (2m x 1m)</td><td>€45</td></tr>
+      <tr><td>Roll-up Banner (85x200cm)</td><td>€65</td></tr>
+      <tr><td>Vinyl Stickers (100 units)</td><td>€30</td></tr>
     </table>
   </div>
 </section>
@@ -108,7 +108,7 @@ write("industries.html", page("Industries We Serve | Lisbon Print House","Printi
 
 # ---------------- FAQ ----------------
 faqs = [
-  ("How fast can I get my order printed?","Most standard orders are ready within 24–72 hours. Rush production is available for urgent requests."),
+  ("How long does printing take?","Lead times vary by product and quantity. Contact us on WhatsApp with your order details and we'll confirm the exact timeline."),
   ("Do you deliver outside Lisbon?","Yes, we deliver to businesses across all of Portugal via trusted courier partners."),
   ("Can you design my artwork for me?","Absolutely — our in-house design team can create artwork from scratch or refine files you already have."),
   ("What file formats do you accept?","We accept PDF, AI, EPS, PSD, and high-resolution JPG/PNG files. Not sure if your file works? Send it on WhatsApp and we'll check."),
@@ -116,7 +116,7 @@ faqs = [
   ("How do I pay?","We accept bank transfer, MB Way, and card payment. Payment details are shared once your quote is confirmed."),
   ("Do you offer installation for banners or window graphics?","Yes, installation is available for banners, window graphics, and vinyl signage within the Lisbon area."),
   ("Can I order a sample before committing to a large order?","Yes, samples are available for most products — just ask when requesting your quote."),
-  ("How do I get a price?","Send us a WhatsApp message describing what you need. We typically reply with a quote within the hour during business hours."),
+  ("How do I get a price?","Send us a WhatsApp message describing what you need — product, quantity, and finish. We'll come back with a full quote."),
   ("Do you work with businesses outside Lisbon?","Yes, we proudly serve businesses across all of Portugal with nationwide delivery."),
 ]
 faq_html = "".join(f'<details class="faq-item fade-up"><summary>{q}</summary><p>{a}</p></details>' for q, a in faqs)
@@ -131,7 +131,7 @@ body = page_hero("Contact","Let's Start Your Next Print Project","Reach us on Wh
   <div class="container contact-grid">
     <div class="fade-up">
       <h2>Get In Touch</h2>
-      <p style="margin-bottom:32px;">We typically respond within the hour during business hours. For the fastest reply, message us directly on WhatsApp.</p>
+      <p style="margin-bottom:32px;">Message us on WhatsApp for the most direct response, or use the form below and we'll get back to you.</p>
       <div class="contact-info-item"><div class="icon-wrap">{ICONS['wa']}</div><div><strong>WhatsApp</strong><span>{PHONE_DISPLAY}</span></div></div>
       <div class="contact-info-item"><div class="icon-wrap">{ICONS['mail']}</div><div><strong>Email</strong><span>{EMAIL}</span></div></div>
       <div class="contact-info-item"><div class="icon-wrap">{ICONS['clock']}</div><div><strong>Business Hours</strong><span>{HOURS}</span></div></div>
@@ -159,7 +159,7 @@ body = page_hero("Contact","Let's Start Your Next Print Project","Reach us on Wh
 write("contact.html", page("Contact Us | Lisbon Print House","Contact Lisbon Print House via WhatsApp, email, or our quote form. Based in Lisbon, delivering across Portugal.",0,"contact",body,"contact.html",schema=org_schema()+breadcrumb_schema([("Home","index.html"),("Contact","contact.html")])))
 
 # ---------------- REQUEST QUOTE ----------------
-body = page_hero("Request a Quote","Tell Us What You Need — Get a Price Fast","Fill in a few quick details and we'll open WhatsApp with everything pre-filled. Or skip the form and message us directly.", [("Home","index.html"),("Request a Quote",None)]) + f"""
+body = page_hero("Request a Quote","Tell Us What You Need","Fill in a few details and we'll open WhatsApp with everything pre-filled. Or skip the form and message us directly.", [("Home","index.html"),("Request a Quote",None)]) + f"""
 <section>
   <div class="container" style="max-width:640px;">
     <div class="card fade-up">
@@ -181,6 +181,6 @@ body = page_hero("Request a Quote","Tell Us What You Need — Get a Price Fast",
   </div>
 </section>
 """
-write("request-quote.html", page("Request a Quote | Lisbon Print House","Request a fast printing quote from Lisbon Print House via WhatsApp. No forms, no waiting — just fast, accurate pricing.",0,"contact",body,"request-quote.html",schema=org_schema()))
+write("request-quote.html", page("Request a Quote | Lisbon Print House","Request a printing quote from Lisbon Print House via WhatsApp. Tell us what you need and we'll come back with accurate pricing.",0,"contact",body,"request-quote.html",schema=org_schema()))
 
 print("Core pages built.")

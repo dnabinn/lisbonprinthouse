@@ -27,7 +27,7 @@ body = f"""
     <div class="fade-up">
       <div class="hero-eyebrow"><span class="dot"></span> Trusted by 300+ Lisbon businesses</div>
       <h1>Professional Printing Services for Businesses in Lisbon</h1>
-      <p class="lead">Fast turnaround, premium quality printing, competitive prices, and dedicated customer support — all one WhatsApp message away.</p>
+      <p class="lead">Premium quality printing, competitive prices, and dedicated customer support — all one WhatsApp message away.</p>
       <div class="hero-ctas">
         <a href="#" class="btn btn-primary" data-wa>{ICONS['wa']} Get a Quote on WhatsApp</a>
         <a href="portfolio.html" class="btn btn-outline">View Portfolio</a>
@@ -35,7 +35,7 @@ body = f"""
       <div class="hero-stats">
         <div class="hero-stat"><strong data-counter="300">0</strong><span>Businesses Served</span></div>
         <div class="hero-stat"><strong data-counter="12000">0</strong><span>Orders Delivered</span></div>
-        <div class="hero-stat"><strong data-counter="48">0</strong><span>Hour Avg. Turnaround</span></div>
+        <div class="hero-stat"><strong data-counter="5">0</strong><span>Years in Business</span></div>
       </div>
     </div>
     <div class="hero-media fade-up">
@@ -51,7 +51,7 @@ body = f"""
 <div class="trust-bar">
   <div class="container trust-grid">
     <div class="trust-item">{ICONS['truck']} Portugal-Wide Delivery</div>
-    <div class="trust-item">{ICONS['clock']} 24–72h Turnaround</div>
+    <div class="trust-item">{ICONS['clock']} Reliable Lead Times</div>
     <div class="trust-item">{ICONS['shield']} Premium Materials</div>
     <div class="trust-item">{ICONS['star']} 4.9/5 Customer Rating</div>
   </div>
@@ -61,14 +61,14 @@ body = f"""
   <div class="container">
     <div class="section-head center">
       <div class="eyebrow">Why Lisbon Print House</div>
-      <h2>Built for Businesses That Can't Afford to Wait</h2>
-      <p>We combine premium print quality with the speed and simplicity busy business owners need.</p>
+      <h2>Built for Businesses That Demand Quality</h2>
+      <p>We combine premium print quality with a personal service that makes every order simple.</p>
     </div>
     <div class="grid grid-4">
-      <div class="card icon-card fade-up"><div class="icon-wrap">{ICONS['clock']}</div><h3>Fast Turnaround</h3><p>Most orders ready in 24–72 hours, with rush options available for urgent jobs.</p></div>
       <div class="card icon-card fade-up"><div class="icon-wrap">{ICONS['shield']}</div><h3>Premium Quality</h3><p>Commercial-grade printing on professional equipment, checked before every delivery.</p></div>
-      <div class="card icon-card fade-up"><div class="icon-wrap">{ICONS['wa']}</div><h3>WhatsApp Support</h3><p>Talk directly to a real person, get quotes fast, and track your order with zero hassle.</p></div>
+      <div class="card icon-card fade-up"><div class="icon-wrap">{ICONS['wa']}</div><h3>WhatsApp Support</h3><p>Talk directly to a real person, get quotes and track your order with zero hassle.</p></div>
       <div class="card icon-card fade-up"><div class="icon-wrap">{ICONS['truck']}</div><h3>Portugal-Wide Delivery</h3><p>Based in Lisbon, delivering to businesses across the entire country.</p></div>
+      <div class="card icon-card fade-up"><div class="icon-wrap">{ICONS['star']}</div><h3>Colour Guaranteed</h3><p>Every order is proofed for colour accuracy before printing — what you approve is what you get.</p></div>
     </div>
   </div>
 </section>
@@ -142,7 +142,7 @@ body = f"""
     </div>
     <div class="process-steps">
       <div class="process-step fade-up"><div class="num">01</div><h3>Message Us on WhatsApp</h3><p>Tell us what you need — or just send a photo or rough idea.</p></div>
-      <div class="process-step fade-up"><div class="num">02</div><h3>Get a Fast Quote</h3><p>We reply with pricing, sizes, and turnaround the same day.</p></div>
+      <div class="process-step fade-up"><div class="num">02</div><h3>Get a Quote</h3><p>We reply with pricing, sizes, and lead time for your order.</p></div>
       <div class="process-step fade-up"><div class="num">03</div><h3>Approve & We Print</h3><p>Confirm your design and we get your order into production.</p></div>
       <div class="process-step fade-up"><div class="num">04</div><h3>Pickup or Delivery</h3><p>Collect in Lisbon or get it delivered anywhere in Portugal.</p></div>
     </div>
@@ -156,18 +156,18 @@ body = f"""
       <h2>Frequently Asked Questions</h2>
     </div>
     <div class="faq-list">
-      <details class="faq-item fade-up" open><summary>How fast can I get my order printed?</summary><p>Most standard orders are ready within 24–72 hours. Rush production is available for urgent requests — just let us know on WhatsApp.</p></details>
+      <details class="faq-item fade-up" open><summary>How long does printing take?</summary><p>Lead times vary by product and quantity. Message us on WhatsApp with your order details and we'll confirm the exact timeline before you commit.</p></details>
       <details class="faq-item fade-up"><summary>Do you deliver outside Lisbon?</summary><p>Yes — we deliver to businesses across all of Portugal via courier partners.</p></details>
       <details class="faq-item fade-up"><summary>Can you design my artwork for me?</summary><p>Absolutely. Our graphic design team can create your artwork from scratch or refine files you already have.</p></details>
       <details class="faq-item fade-up"><summary>What's the minimum order quantity?</summary><p>It depends on the product — many items like business cards and stickers have low minimums suited to small businesses.</p></details>
-      <details class="faq-item fade-up"><summary>How do I get a price?</summary><p>Just send us a WhatsApp message with what you need. We typically reply with a quote within the hour during business hours.</p></details>
+      <details class="faq-item fade-up"><summary>How do I get a price?</summary><p>Just send us a WhatsApp message with what you need — product, quantity, and any finish preferences. We'll come back with a full quote.</p></details>
     </div>
   </div>
 </section>
 """
 
 schema = org_schema() + faq_schema([
-  ("How fast can I get my order printed?","Most standard orders are ready within 24 to 72 hours, with rush production available."),
+  ("How long does printing take?","Lead times vary by product and quantity. Contact us on WhatsApp for the exact timeline for your order."),
   ("Do you deliver outside Lisbon?","Yes, we deliver to businesses across all of Portugal."),
   ("Can you design my artwork for me?","Yes, our graphic design team can create or refine your artwork."),
 ])
